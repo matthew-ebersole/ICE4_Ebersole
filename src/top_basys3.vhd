@@ -1,4 +1,3 @@
---+----------------------------------------------------------------------------
 --| 
 --| COPYRIGHT 2018 United States Air Force Academy All rights reserved.
 --| 
@@ -91,9 +90,9 @@ begin
 	clkdiv_inst : clock_divider 		--instantiation of clock_divider to take 
         generic map ( k_DIV => 50000000 ) -- 1 Hz clock from 100 MHz
         port map (						  
-            i_clk   => 
-            i_reset => 
-            o_clk   => 
+            i_clk   => clk,
+            i_reset => btnC,
+            o_clk   => w_clk
         );    
 	
 end top_basys3_arch;
